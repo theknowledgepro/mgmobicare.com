@@ -4,6 +4,7 @@ import NextTopLoader from 'nextjs-toploader';
 import { SITE_DATA } from '@/config';
 import { Titillium_Web } from 'next/font/google';
 import { Header, Footer } from '@/app/_components';
+import { ContextProvider } from '@/context';
 import '@/styles/index.css';
 
 export const inter = Titillium_Web({ subsets: ['latin'], weight: ['300', '400', '600', '700'] });
@@ -36,11 +37,13 @@ export default function RootLayout({ children }) {
 						shadow='0 0 10px #843bd1,0 0 5px #843bd1'
 					/>
 				</div>
-				<ThemeRegistry options={{ key: 'mui' }}>
-					<Header />
-					{children}
-					<Footer />
-				</ThemeRegistry>
+				<ContextProvider>
+					<ThemeRegistry options={{ key: 'mui' }}>
+						<Header />
+						{children}
+						<Footer />
+					</ThemeRegistry>
+				</ContextProvider>
 			</body>
 		</html>
 	);

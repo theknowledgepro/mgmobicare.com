@@ -95,3 +95,75 @@
     min-width: 200px;
     padding: 10px;
 }
+
+/* HERO CSS */
+
+.hero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.hero_overlay {
+    @apply absolute top-0 left-0 h-full w-full items-center justify-center flex flex-col;
+}
+
+.hero_overlay .hero_title {
+    @apply text-white font-[800] text-center xss:text-[40px] md:text-[60px] leading-[70px] relative;
+    text-shadow: 0px 0px 10px var(--color-primary);
+}
+
+.hero_overlay .bread_crumb {
+    @apply flex items-center font-[600] justify-center w-full cursor-pointer hover:scale-[1.3] duration-[400ms] hover:opacity-[.9] text-white xss:text-[15px] sm:text-[25px] xss:mt-[0px] sm:mt-[10px];
+}
+
+/* CONTACT FORM CSS */
+
+.contact_form_wrapper {
+    @apply w-full h-[max-content] xss:p-[20px_15px] sm:p-[20px_30px] md:p-[20px_40px] rounded-[10px] border-t-[2px] border-[var(--color-primary)];
+    box-shadow: 0 0.46875rem 2.1875rem rgb(90 97 105 / 10%), 0 0.9375rem 1.40625rem rgb(90 97 105 / 10%), 0 0.25rem 0.53125rem rgb(90 97 105 / 12%),
+        0 0.125rem 0.1875rem rgb(90 97 105 / 10%);
+}
+
+.contact_form {
+    @apply xss:p-[30px_0px_0px] md:p-[30px_0px_0px_0px]
+}
+
+.contact_form input,
+.contact_form textarea {
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0 3px rgb(0 0 0 / 30%);
+    margin: 10px 0px 20px 0;
+    padding: 10px 20px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    color: #000;
+    background: #fff;
+}
+
+.contact_form textarea {
+    min-height: 100px;
+    resize: vertical;
+    color: #000
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+    box-shadow: 0px 0 8px var(--color-primary);
+}
+
+.contact_form label {
+    @apply font-[600] text-[14px] cursor-pointer text-[var(--color-primary)];
+}
+
+.contact_form_logo {
+    @apply xss:h-[200px] md:h-[300px] xss:w-[max-content] md:w-full md:mt-[20px];
+}

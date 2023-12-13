@@ -144,7 +144,7 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 				ref={pcHeaderRef}
 				id='pc-header-ref'
 				className={`${
-					headerOriginalBgColor ? 'header-bg-original' : ''
+					headerOriginalBgColor ? 'bg-[var(--color-primary)]' : ''
 				} hidden $shadow-[0_0_10px_var(--color-primary)] xss:p-[0px_7%] md:p-[0px_10%] w-full xss:h-[60px] md:h-[75px] border-b border-zinc-300 md:flex justify-between items-center transition-all ease-out duration-300`}>
 				<ImageTag
 					src={ASSETS.LOGO}
@@ -164,8 +164,8 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 											onClick={() => handleDesktopNavClick(nav)}
 											className={`${
 												nav.children?.find((index) => index?.href === windowLocation)
-													? `text-[var(--color-primary)] before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[50%] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px]`
-													: `${isScrollActive ? 'text-white' : 'text-black'}`
+													? `text-white before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[50%] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px]`
+													: `${isScrollActive ? 'text-white' : 'text-white'}`
 											} text-[18px] font-[600] relative`}>
 											{nav.name} <ExpandMoreIcon />
 										</Link>
@@ -180,7 +180,7 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 														className={`${
 															windowLocation === nav.href
 																? `text-[var(--color-primary)] before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[50%] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px]`
-																: 'text-black'
+																: 'text-white'
 														} text-[18px] font-[600] relative`}>
 														{nav.name}
 													</Link>
@@ -197,13 +197,13 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 											className={`${
 												windowLocation === nav.href
 													? `${
-															isScrollActive ? 'text-white' : 'text-[var(--color-primary)]'
+															isScrollActive ? 'text-white' : 'text-white'
 													  } before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] ${
 															isScrollActive ? 'before:bg-white' : 'before:bg-[var(--color-primary)]'
 													  } before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[50%] after:rounded-[30px] ${
 															isScrollActive ? 'after:bg-white' : 'after:bg-[var(--color-primary)]'
 													  } after:bottom-[-10px] after:left-[15px]`
-													: `${isScrollActive ? 'text-white' : 'text-black'}`
+													: `${isScrollActive ? 'text-white' : 'text-white'}`
 											} text-[18px] font-[600] relative`}>
 											{nav.name}
 										</Link>
@@ -228,7 +228,7 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 					priority={true}
 				/>
 				<IconButton onClick={handleOpenSideNav}>
-					<MenuIcon className={`text-[28px] ${headerOriginalBgColor || isScrollActive ? 'text-white' : `text-[var(--color-primary)]`}`} />
+					<MenuIcon className={`text-[28px] ${headerOriginalBgColor || isScrollActive ? 'text-white' : `text-white`}`} />
 				</IconButton>
 			</div>
 			<div
@@ -245,8 +245,7 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 					priority={true}
 				/>
 
-				<List
-					className={`flex flex-col text-white items-center justify-center overflow-y-auto overflow-x-hidden mt-[8px] h-full flex pb-[70px]`}>
+				<List className={`flex flex-col text-white items-center justify-center overflow-y-auto overflow-x-hidden mt-[8px] h-full pb-[70px]`}>
 					{NavItems.map((nav, index) => (
 						<React.Fragment key={index}>
 							{nav.children && (

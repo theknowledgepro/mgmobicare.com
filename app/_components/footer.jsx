@@ -60,10 +60,7 @@ const Footer = () => (
 				</div>
 
 				<div className='col-span-1 flex flex-col items-center justify-start'>
-					<ContactIcon
-						texts={['Our Office', '23, The Green Ste R, Dover County, Delaware, USA.']}
-						icon={<LocationOnOutlinedIcon className='text-[40px]' />}
-					/>
+					<ContactIcon texts={['Our Office', SITE_DATA.HEAD_OFFICE]} icon={<LocationOnOutlinedIcon className='text-[40px]' />} />
 				</div>
 
 				<div className='col-span-1 flex flex-col items-center justify-start'>
