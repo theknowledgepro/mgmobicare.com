@@ -1,0 +1,26 @@
+/* 1. Colors */
+.bg-primary {
+    background: var(--color-primary) !important;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+/* 2. Scroll Bars */
+.body-sticky {
+    @apply overflow-hidden
+}
+
+.scroll-design::-webkit-scrollbar {
+    width: 4px;
+}
+
+.scroll-design::-webkit-scrollbar-thumb {
+    background: rgba(134, 134, 134, 0.5);
+    border-radius: 20px;
+}
+
+.scroll-design::-webkit-scrollbar-thumb:hover {
+    background: #0006;
+}

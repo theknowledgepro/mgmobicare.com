@@ -1,0 +1,97 @@
+.social_icons a {
+    @apply relative z-[1] overflow-hidden rounded-[50%] w-[40px] h-[40px] flex items-center justify-center bg-[var(--color-primary)] text-[var(--color-secondary)];
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 0 0.3rem var(--color-secondary);
+}
+
+.social_icons a:hover {
+    @apply text-[var(--color-primary)]
+}
+
+.social_icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-secondary);
+    z-index: -1;
+    transition: .6s;
+}
+
+.social_icons a:hover::before {
+    width: 100%;
+}
+
+.social_icons a .icon {
+    @apply text-[1.5rem]
+}
+
+/* Button Css */
+.button {
+    @apply normal-case relative z-[1] overflow-hidden ease-linear duration-300 w-[max-content] text-[1rem] font-[600];
+    border: 2px solid var(--background-color) !important;
+    background: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+.button:hover {
+    background: var(--text-color) !important;
+    color: var(--background-color) !important;
+}
+
+.button::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 100% !important;
+    background: var(--text-color) !important;
+    z-index: -1 !important;
+    transition: .4s !important;
+}
+
+.button:hover::before {
+    width: 100% !important;
+}
+
+.button.second_btn {
+    background: var(--text-color) !important;
+    color: var(--background-color) !important;
+}
+
+.button.second_btn:hover {
+    color: var(--text-color)
+}
+
+.button.second_btn::before {
+    background: var(--background-color) !important;
+}
+
+/* WEB HEADER CSS */
+.header_dropdown {
+    position: relative;
+    border-radius: 10px !important;
+}
+
+.header_dropdown>div {
+    display: none;
+}
+
+.header_dropdown:hover>div {
+    display: grid;
+}
+
+.header_dropdown>div {
+    display: none;
+    position: absolute;
+    top: 28px;
+    right: -20%;
+    background: white;
+    border-radius: 8px !important;
+    width: max-content;
+    min-width: 200px;
+    padding: 10px;
+}

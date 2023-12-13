@@ -1,0 +1,16 @@
+:root {
+    /* =========== APP COLOR VARIABLES =========== */
+    --app-bg: rgb(255, 255, 255);
+    --color-user-select: rgba(132, 59, 209, 0.2);
+    --color-primary: #853dd1;
+    --color-secondary: #fbf7ff;
+    --color-success: #50bd46;
+    --color-info: #0495c7;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+
+    --hover-bg: #ede4f8;
+    --hover-color: #000;
+
+    --border-radius: 5px;
+}
