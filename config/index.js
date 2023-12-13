@@ -18,6 +18,7 @@ module.exports = {
 		POLICY: `${host}/policy`,
 		TERMS: `${host}/terms`
 	},
+	API_ROUTES: { CONTACT_FORM_SUBMIT: '/api/contact-form-submit' },
 	ASSETS: {
 		LOGO: logoFile
 	}

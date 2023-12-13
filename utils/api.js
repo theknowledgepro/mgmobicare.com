@@ -1,4 +1,5 @@
 import { validate } from '@/utils/validate';
+import { API_ROUTES } from '@/config';
 import axios from 'axios';
 
 export const contactUsFormAPISubmit = async ({ name, email, phone, message, isLoading, setIsLoading, setToast }) => {
@@ -8,7 +9,7 @@ export const contactUsFormAPISubmit = async ({ name, email, phone, message, isLo
 	if (isLoading) return;
 	setIsLoading(true);
 	try {
-		const res = await axios.post('/api/contact-form-submit', { name, email, phone, message });
+		const res = await axios.post(API_ROUTES.CONTACT_FORM_SUBMIT, { name, email, phone, message });
 		if (res.status === 200) {
 			setToast({ success: res?.data?.message });
 			setIsLoading(false);

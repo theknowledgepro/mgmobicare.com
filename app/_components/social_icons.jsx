@@ -7,9 +7,9 @@ import WhatsApp from '@mui/icons-material/WhatsApp';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 
 const SocialIcons = ({ className }) => {
-	const linkedInUrl = '';
-	const facebookUrl = '';
-	const instagramUrl = '';
+	const linkedInUrl = 'promisedera.com';
+	const facebookUrl = 'promisedera.com';
+	const instagramUrl = 'promisedera.com';
 
 	return (
 		<div className={`${styles.social_icons} ${className}`}>
