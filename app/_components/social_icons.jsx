@@ -5,6 +5,7 @@ import FacebookOutlined from '@mui/icons-material/FacebookOutlined';
 import Instagram from '@mui/icons-material/Instagram';
 import WhatsApp from '@mui/icons-material/WhatsApp';
 import LinkedIn from '@mui/icons-material/LinkedIn';
+import { SITE_DATA } from '@/config';
 
 const SocialIcons = ({ className }) => {
 	const linkedInUrl = 'promisedera.com';
@@ -24,7 +25,9 @@ const SocialIcons = ({ className }) => {
 			</Link>
 			<Link
 				target='_blank'
-				href={`https://wa.me/${+2347041960963}?text=Hello,%20Chidera%20Promise,%20My%20name%20is%20_____%20I%20want%20to%20work%20with%20you%20on___"`}>
+				href={`https://wa.me/${SITE_DATA.CONTACT_TEL}?text=${encodeURIComponent(
+					`Hello, ${SITE_DATA.NAME}, My name is _____, and I need an assitance with____`
+				)}`}>
 				<WhatsApp className={styles.icon} />
 			</Link>
 		</div>
