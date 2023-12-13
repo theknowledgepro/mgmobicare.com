@@ -89,7 +89,7 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 	const sideBarRef = useRef(null);
 	const mobileHeaderRef = useRef(null);
 
-	HideShowNavbarOnScroll({ startPosition: 20, targetRef: mobileHeaderRef, className: 'translate-y-[-100vh]' });
+	HideShowNavbarOnScroll({ startPosition: 500, targetRef: mobileHeaderRef, className: 'translate-y-[-100vh]' });
 	HideShowNavbarOnScroll({ startPosition: 600, targetRef: pcHeaderRef, className: 'translate-y-[-100vh]' });
 	ChangeClassNameAtPosition({
 		startPosition: 45,
@@ -240,7 +240,7 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 				<ImageTag
 					src={ASSETS.LOGO}
 					style={{ width: '110px', height: '110px' }}
-					className='border border-gray-100 bg-white btn-animated rounded-[50%] mx-auto mb-1 p-2 shadow-lg'
+					className='border border-gray-100 bg-white btn-animated rounded-[50%] mx-auto mt-[30px] mb-1 p-2 shadow-lg'
 					alt='logo'
 					priority={true}
 				/>

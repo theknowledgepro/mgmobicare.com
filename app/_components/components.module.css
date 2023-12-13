@@ -97,6 +97,11 @@
 }
 
 /* HERO CSS */
+.hero_container {
+    @apply relative m-auto overflow-hidden items-center justify-center flex text-center w-full xss:h-[60vh] sm:h-[80vh];
+    max-width: 100vw;
+    min-height: 300px;
+}
 
 .hero {
     background-attachment: fixed !important;

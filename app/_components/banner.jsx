@@ -16,7 +16,7 @@ const WebBanner = ({ src = '/retirement-home-concept-with-nurse.jpg', page = '' 
 	}, [src]);
 
 	return (
-		<section className={'relative w-full xss:h-[60vh] sm:h-[80vh]'}>
+		<section className={`${styles.hero_container}`}>
 			{!isLoaded && <Skeleton variant='rectangular' className={`${styles.hero} bg-zinc-500 xss:h-[60vh] sm:h-[80vh]`} />}
 			<div style={{ display: isLoaded ? 'block' : 'none', backgroundImage: `url(${src})` }} className={styles.hero} />
 			<div className={`${styles.hero_overlay}`}>
