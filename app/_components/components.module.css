@@ -104,10 +104,7 @@
 }
 
 .hero {
-    background-attachment: fixed !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    /* background-size: contain !important; */
+    object-fit: cover;
     position: relative !important;
     height: 100% !important;
     width: 100% !important;
