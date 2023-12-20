@@ -1,5 +1,5 @@
-const API_DOMAIN = 'http://localhost:5000/static';
-// const API_DOMAIN = 'https://webservices.promisedera.com/static';
+const API_DOMAIN = 'http://localhost:3000/api/mgmobicare';
+// const API_DOMAIN = 'https://services.promisedera.com/api/mgmobicare';
 
 const nextConfig = {
 	compiler: { styledComponents: true },

@@ -5,7 +5,8 @@ import ContactClient from './client';
 
 export async function generateMetadata({ id, searchParams }) {
 	const metadata = await generateMetaData();
-	return { ...metadata, title: `Contact Us | ${SITE_DATA.OFFICIAL_NAME}` };
+	const title = `Contact Us | ${SITE_DATA.OFFICIAL_NAME}`;
+	return { ...metadata, title, openGraph: { ...metadata.openGraph, title } };
 }
 
 const Contact = async () => {
