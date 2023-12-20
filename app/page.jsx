@@ -47,6 +47,8 @@ const Client = () => {
 			icon: <Diversity1Icon className='text-[50px] text-white' />
 		}
 	];
+
+	const thumbnails = ['/folder/1.jpg', '/folder/2.jpg', '/folder/3.jpg', '/folder/4.jpg'];
 	return (
 		<div className='w-full h-full min-w-[100vw]'>
 			<Slider className='relative' {...carouselSettings}>
@@ -104,7 +106,7 @@ const Client = () => {
 					))}
 				</div>
 			</section>
-			<section className={`bg-[#f2e8fd] xss:p-[60px_5%] md:p-[0px_10%]`}>
+			<section className={`bg-[#f2e8fd] xss:p-[60px_5%] md:p-[60px_10%]`}>
 				<div className='w-full mb-[40px]'>
 					<div className='uppercase w-[max-content] font-[600] py-[5px] text-black'>Who we are</div>
 					<h2
@@ -138,11 +140,24 @@ const Client = () => {
 						</Link>
 					</div>
 					<div className='xss:col-span-12 md:col-span-5 xss:order-1 md:order-2 h-full'>
-						<img src='/folder/1.jpg' className='w-full h-full max-h-[320px] m-auto rounded-[5px] border-[3px] border-white' />
+						<div className='grid grid-cols-12 gap-0 about-bg'>
+							{thumbnails.map((src, i) => (
+								<div key={i} className='col-span-6 text-start'>
+									<ImageTag
+										priority
+										className={`${(i === 0 || i === 3) && 'w-full'} ${(i === 1 || i === 2) && 'w-[85%]'} ${
+											i === 2 && 'mt-[15%]'
+										} border-[2px] max-h-[180px] object-contain border-white`}
+										src={src}
+									/>
+								</div>
+							))}
+						</div>
+						{/* <img src='/folder/1.jpg' className='w-full h-full max-h-[320px] m-auto rounded-[5px] border-[3px] border-white' /> */}
 					</div>
 				</div>
 			</section>
-			<section className={`bg-[#fcfbfd] ${styles.section}`}>
+			<section className={`${styles.section}`}>
 				<div className='w-full flex flex-col items-center justify-center mb-[40px] text-[var(--color-primary)]'>
 					<span className='text-[#000] text-[1rem] font-[600] uppercase'>What we do</span>
 					<h2 className='font-[600] text-[2rem]'>Our Services</h2>
