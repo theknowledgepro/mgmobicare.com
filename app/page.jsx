@@ -27,7 +27,13 @@ const Client = () => {
 		slidesToScroll: 1
 	};
 
-	const slides = [{ backgroundImage: bg1, headline: 'Quality Caring Services at Home', description: '' }];
+	const slides = [
+		{
+			backgroundImage: '/positive-mother-daughter-enjoying-dramatic-view.jpg',
+			headline: 'Mgmobi Care...',
+			description: ['Trusted Allies in Care...', 'Building trust through personalized care...', 'Dedicated to your well-being, always here...']
+		}
+	];
 
 	const perksData = [
 		{
@@ -54,9 +60,10 @@ const Client = () => {
 			<Slider className='relative' {...carouselSettings}>
 				{slides?.map((slide, i) => (
 					<div key={i} className={`relative min-h-[99vh] bg-inherit`}>
-						<img
+						<ImageTag
+							priority
 							className='absolute bg-inherit h-full object-cover w-full '
-							src={slide?.backgroundImage.src}
+							src={slide?.backgroundImage}
 							style={{ maxHeight: '768px' }}
 							alt={`Slide Thumbnail`}
 						/>
@@ -65,16 +72,16 @@ const Client = () => {
 								className={`relative xss:ml-[8px] md:ml-[70px] pt-[100px] pb-[30px] pr-[100px ] border-l-[15px] border-[var(--color-primary)] xss:h-[70%] md:h-[62%] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[100px] before:h-[15px] before:bg-[var(--color-primary)] after:content-[''] after:absolute after:top-[100%] after:mt-[-15px] after:left-0 after:w-[100px] after:h-[15px] after:bg-[var(--color-primary)]`}>
 								<div className={`flex justify-start`}>
 									<div className={`px-3 xss:w-[90vw] md:w-[60vw]`}>
-										<h1 className={`line-height-2 xss:text-[30px] md:text-[50px] font-[600] text-white mb-4`}>
+										<h1 className={`line-height-2 xss:text-[30px] md:text-[50px] font-[600] text-white mb-2`}>
 											{slide?.headline}
 										</h1>
 										<div className='xss:text-[17px] md:text-[20px] font-[400] text-white mb-4 pb-2'>
 											<Typewriter
 												options={{
-													strings: [slide?.description],
+													strings: slide?.description,
 													autoStart: true,
-													cursorClassName: 'xss:text-[25px] md:text-[30px] xss:leading-[30px] md:leading-[35px]',
-													wrapperClassName: 'xss:text-[17px] md:text-[20px] xss:leading-[25px] md:leading-[30px]',
+													cursorClassName: 'xss:text-[25px] md:text-[35px] xss:leading-[35px] md:leading-[45px]',
+													wrapperClassName: 'xss:text-[17px] md:text-[25px] xss:leading-[25px] md:leading-[35px]',
 													loop: true
 												}}
 											/>
@@ -108,7 +115,7 @@ const Client = () => {
 			</section>
 			<section className={`bg-[#f2e8fd] xss:p-[60px_5%] md:p-[60px_10%]`}>
 				<div className='w-full mb-[40px]'>
-					<div className='uppercase w-[max-content] font-[600] py-[5px] text-black'>Who we are</div>
+					<div className='uppercase w-[max-content] font-[600] xss:pt-[50px] md:pt-[10px] pb-[5px] text-black'>Who we are</div>
 					<h2
 						style={{ textShadow: '1px 1px 2px #000' }}
 						className='font-[600] w-[max-content] text-[2rem] before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[40px] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px] text-[var(--color-primary)] relative'>
