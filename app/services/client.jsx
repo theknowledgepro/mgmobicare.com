@@ -33,6 +33,7 @@ const Client = () => {
 							}`}>
 							<ImageTag
 								alt={title}
+								priority
 								className={`my-auto w-full h-full max-h-[300px] border-[3px] ${
 									index % 2 === 0 ? 'border-white' : 'border-[#f2e8fd]'
 								} rounded-[5px]`}

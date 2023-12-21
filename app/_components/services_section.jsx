@@ -24,10 +24,10 @@ const ServiceCard = ({ service, cardWrapperClassName }) => {
 			ref={cardRef}
 			onClick={handleFlip}
 			cardWrapperClassName={cardWrapperClassName}
-			cardWrapperHeight={'340px'}
+			cardWrapperHeight={'310px'}
 			frontContent={
 				<div className='w-full h-full relative'>
-					<ImageTag src={service?.thumbnail} className={`w-full h-full max-h-[290px] rounded-[inherit]`} alt={service?.title} />
+					<ImageTag priority src={service?.thumbnail} className={`w-full h-full max-h-[290px] rounded-[inherit]`} alt={service?.title} />
 					<div className='border-t-[3px] border-[var(--color-primary)] absolute bottom-0 left-0 right-0 w-full bg-white'>
 						<div
 							style={{ textShadow: '1px 1px 2px #000' }}
