@@ -3,7 +3,6 @@ import ThemeRegistry from '@/app/_theme_regsitry';
 import NextTopLoader from 'nextjs-toploader';
 import { SITE_DATA } from '@/config';
 import { Titillium_Web } from 'next/font/google';
-import { Header, Footer } from '@/app/_components';
 import { ContextProvider } from '@/context';
 import '@/styles/index.css';
 
@@ -38,11 +37,7 @@ export default function RootLayout({ children }) {
 					/>
 				</div>
 				<ContextProvider>
-					<ThemeRegistry options={{ key: 'mui' }}>
-						<Header />
-						{children}
-						<Footer />
-					</ThemeRegistry>
+					<ThemeRegistry options={{ key: 'mui' }}>{children}</ThemeRegistry>
 				</ContextProvider>
 			</body>
 		</html>

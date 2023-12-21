@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from '@/app/app.module.css';
+import styles from '@/app/(pages)/app.module.css';
 import { WebBanner, BookAppointment, TestimonialSection, ImageTag, ContactForm } from '@/app/_components';
 import services from '@/config/services';
 import { TESTIMONIALS } from '@/config';

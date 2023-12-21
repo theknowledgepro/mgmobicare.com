@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from '@/app/app.module.css';
+import styles from '@/app/(pages)/app.module.css';
 import { Paper } from '@mui/material';
 import { SITE_DATA, APP_ROUTES, TESTIMONIALS } from '@/config';
 import { ContactForm, ImageTag, BookAppointment, ServicesSection, TestimonialSection } from '@/app/_components';

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from '@/app/app.module.css';
+import styles from '@/app/(pages)/app.module.css';
 import { ContactForm, WebBanner } from '@/app/_components';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import MarkEmailReadRoundedIcon from '@mui/icons-material/MarkEmailReadRounded';

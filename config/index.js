@@ -8,6 +8,7 @@ module.exports = {
 	SITE_DATA: {
 		NAME: 'Mgmobi Care',
 		OFFICIAL_NAME: 'MGMOBI CARE',
+		TWITTER_HANDLE: '',
 		THEME_COLOR: '#843bd1',
 		CONTACT_TEL: '07041960963',
 		CONTACT_EMAIL: 'info@mgmobi.com',
@@ -23,7 +24,11 @@ module.exports = {
 		ABOUT: `${host}/about`,
 		SERVICES: `${host}/services`,
 		POLICY: `${host}/policy`,
-		TERMS: `${host}/terms`
+		TERMS: `${host}/terms`,
+
+		ADMIN: `${host}/admin`,
+		ADMIN_LOGIN: `${host}/admin/login`,
+		ADMIN_FORGOT_PASSWORD: `${host}/admin/forgot-password`
 	},
 	API_ROUTES: { CONTACT_FORM_SUBMIT: '/api/contact-form' },
 	ASSETS: {

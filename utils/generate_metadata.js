@@ -1,64 +1,104 @@
 'use server';
-import { SITE_DATA } from '@/config';
+import { SITE_DATA, APP_ROUTES } from '@/config';
+import services from '@/config/services';
 
-const generateMetaData = async () => {
-	const defaults = {
-		description: `${SITE_DATA.NAME} official website.`,
-		siteName: SITE_DATA.NAME
-	};
-
+const generateMetaData = async ({ title }) => {
 	return {
-		keywords: [`${SITE_DATA.NAME}`, ''],
-		generator: defaults.siteName,
-		applicationName: defaults.siteName,
+		title,
+		description:
+			'Discover compassionate homecare services tailored to your needs. Personalized care plans, skilled caregivers, and a commitment to well-being.',
+		keywords: [
+			SITE_DATA.NAME,
+			...services?.map((service) => {
+				return service?.title;
+			}),
+			'Homecare',
+			'Elderly Care',
+			'Personalized Care',
+			'Compassionate Assistance',
+			'Skilled Caregivers',
+			'Holistic Wellness',
+			'Specialized Healthcare',
+			'In-Home Rehabilitation',
+			'Nutritional Counseling',
+			'Respite Care',
+			'Palliative Support',
+			'Adaptive Home Modifications',
+			'Transportation Services',
+			'Wellness Programs',
+			'Senior Living',
+			'Memory Care',
+			'Chronic Disease Management',
+			'Emotional Support',
+			'Family Involvement',
+			'Transparent Care',
+			'Remote Caregiver Support',
+			'Home Safety',
+			'Rehabilitation Services',
+			'Independence',
+			'Quality of Life',
+			'Social Engagement',
+			'Outdoor Mobility',
+			'Telehealth Services',
+			'Comfortable Living',
+			'Dignified Care',
+			'Holistic Aging',
+			'Companionship',
+			'Innovative Technology',
+			'Informed Care',
+			'Client-Centered Approach',
+			'Mindfulness',
+			'Nutrient-Rich Meals',
+			'Specialized Therapies'
+		],
+		applicationName: SITE_DATA.NAME,
+		metadataBase: new URL(`${APP_ROUTES.HOME}`),
 		referrer: 'origin-when-cross-origin',
-		metadataBase: new URL(`https://${process.env.DOMAIN}`),
 		icons: {
-			icon: '/icon.png',
-			shortcut: '/shortcut-icon.png',
-			apple: '/apple-icon.png',
+			icon: '/icons/icon.png',
+			shortcut: '/icons/shortcut-icon.png',
+			apple: '/icons/apple-icon.png',
 			other: {
 				rel: 'apple-touch-icon-precomposed',
-				url: '/apple-touch-icon-precomposed.png'
+				url: '/icons/apple-touch-icon-precomposed.png'
 			}
 		},
 		openGraph: {
-			description: defaults.description,
-			siteName: defaults.siteName,
+			title,
+			description:
+				'Discover compassionate homecare services tailored to your needs. Personalized care plans, skilled caregivers, and a commitment to well-being.',
+			siteName: SITE_DATA.NAME,
 			images: [
 				{
-					url: 'https://nextjs.org/og.png',
+					url: `${APP_ROUTES.HOME}og.png`,
 					width: 800,
 					height: 600
+				},
+				{
+					url: `${APP_ROUTES.HOME}og.png`,
+					width: 1800,
+					height: 1600
 				}
 			],
 			locale: 'en_US',
 			type: 'website'
 		},
 		twitter: {
-			card: 'app',
-			description: defaults.description,
-			app: {
-				name: 'twitter_app',
-				id: {
-					iphone: 'twitter_app://iphone',
-					ipad: 'twitter_app://ipad',
-					googleplay: 'twitter_app://googleplay'
-				},
-				url: {
-					iphone: 'https://iphone_url',
-					ipad: 'https://ipad_url'
-				}
-			}
+			card: 'summary',
+			title,
+			description:
+				'Discover compassionate homecare services tailored to your needs. Personalized care plans, skilled caregivers, and a commitment to well-being.',
+			images: [`${APP_ROUTES.HOME}og.png`],
+			site: SITE_DATA.TWITTER_HANDLE
 		},
 		robots: {
-			index: false,
+			index: true,
 			follow: true,
 			nocache: true,
 			googleBot: {
 				index: true,
-				follow: false,
-				noimageindex: true,
+				follow: true,
+				noimageindex: false,
 				'max-video-preview': -1,
 				'max-image-preview': 'large',
 				'max-snippet': -1

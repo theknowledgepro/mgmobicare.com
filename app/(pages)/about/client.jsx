@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import styles from '@/app/app.module.css';
+import styles from '@/app/(pages)/app.module.css';
 import { WebBanner, ContactForm, ImageTag, ServicesSection } from '@/app/_components';
 import { SITE_DATA } from '@/config';
-import img1 from '@/assets/services/1.jpg';
+import img10 from '@/assets/services/10.jpg';
 import img2 from '@/assets/services/2.jpg';
 import img3 from '@/assets/services/3.jpg';
 import img4 from '@/assets/services/4.jpg';
@@ -14,9 +14,11 @@ const Client = () => {
 			<WebBanner src='/positive-mother-daughter-enjoying-dramatic-view.jpg' page='About Us' />
 			<section className={`bg-[#f2e8fd] ${styles.section}`}>
 				<div className='xss:col-span-1 md:col-span-12 text-center mb-[60px] text-[var(--color-primary)]'>
-					<h2 className='font-[600] text-[2rem]'>About {SITE_DATA.NAME}</h2>
+					<h2 style={{ textShadow: '1px 1px 2px #000' }} className='font-[600] text-[2rem]'>
+						About {SITE_DATA.NAME}
+					</h2>
 				</div>
-				<div className='w-full grid grid-cols-12 xss:gap-0 md:gap-[2rem] mb-[20px]'>
+				<div className='w-full grid grid-cols-12 xss:gap-x-0 xss:gap-y-[10px] md:gap-[2rem] mb-[20px]'>
 					<div className='text-[17px] xss:col-span-12 md:col-span-7 xss:order-2 md:order-1 my-auto'>
 						Welcome to <span className='text-[var(--color-primary)]'>{SITE_DATA.NAME}</span>, a leading provider of personalized homecare
 						services.
@@ -30,12 +32,12 @@ const Client = () => {
 							alt={'About Image 1'}
 							priority
 							className={`my-auto w-full h-full max-h-[300px] border-[3px] border-white rounded-[5px]`}
-							src={img1}
+							src={img10}
 						/>
 					</div>
 				</div>
 
-				<div className='w-full grid grid-cols-12 xss:gap-0 md:gap-[2rem] mb-[20px]'>
+				<div className='w-full grid grid-cols-12 xss:gap-x-0 xss:gap-y-[10px] md:gap-[2rem] mb-[20px]'>
 					<div className='text-[17px] xss:col-span-12 md:col-span-7 xss:order-2 md:order-1 my-auto'>
 						Whether it's assistance with daily activities, medication management, or specialized healthcare needs, we are here to support
 						you and your loved ones on the journey to optimal well-being.
@@ -55,7 +57,7 @@ const Client = () => {
 					</div>
 				</div>
 
-				<div className='w-full grid grid-cols-12 xss:gap-0 md:gap-[2rem] mb-[20px]'>
+				<div className='w-full grid grid-cols-12 xss:gap-x-0 xss:gap-y-[10px] md:gap-[2rem] mb-[20px]'>
 					<div className='text-[17px] xss:col-span-12 md:col-span-7 xss:order-2 md:order-1 my-auto'>
 						In addition to our skilled and compassionate team, <span className='text-[var(--color-primary)]'>{SITE_DATA.NAME}</span>
 						embraces innovation and technology to enhance the overall care experience. We leverage cutting-edge solutions to streamline
@@ -76,7 +78,7 @@ const Client = () => {
 					</div>
 				</div>
 
-				<div className='w-full grid grid-cols-12 xss:gap-0 md:gap-[2rem] mb-[20px]'>
+				<div className='w-full grid grid-cols-12 xss:gap-x-0 xss:gap-y-[10px] md:gap-[2rem] mb-[20px]'>
 					<div className='text-[17px] xss:col-span-12 md:col-span-7 xss:order-2 md:order-1 my-auto'>
 						<span className='text-[var(--color-primary)]'>{SITE_DATA.NAME}</span> is not just a service provider; we are your partners in
 						care. Our goal is to create a supportive and nurturing environment where individuals can thrive in the comfort of their homes.
