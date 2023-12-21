@@ -24,7 +24,7 @@ const ServiceCard = ({ service, cardWrapperClassName }) => {
 			ref={cardRef}
 			onClick={handleFlip}
 			cardWrapperClassName={cardWrapperClassName}
-			cardWrapperHeight={'310px'}
+			cardWrapperHeight={'280px'}
 			frontContent={
 				<div className='w-full h-full relative'>
 					<ImageTag priority src={service?.thumbnail} className={`w-full h-full max-h-[290px] rounded-[inherit]`} alt={service?.title} />
@@ -39,11 +39,11 @@ const ServiceCard = ({ service, cardWrapperClassName }) => {
 			}
 			rearContent={
 				<div className='p-3 flex flex-col items-center justify-center relative w-full h-full'>
-					<div className='w-full flex items-center justify-center my-[10px]'>{service?.icon}</div>
+					<div className='w-full flex items-center justify-center mb-[10px]'>{service?.icon}</div>
 					<div style={{ textShadow: '1px 1px 2px #0007' }} className='w-full text-center text-[20px]'>
 						{service?.title}
 					</div>
-					<div className='py-3 text-center w-full'>{service?.summary}</div>
+					<div className='pt-3 pb-[25px] text-center w-full'>{service?.summary}</div>
 					<Link
 						href={`${APP_ROUTES.SERVICES}#${service?.title?.split(' ')?.join('-')?.toLowerCase()}`}
 						className='border-t-[3px] border-[var(--color-primary)] absolute bottom-0 left-0 right-0 w-full flex items-end justify-end font-[600] px-[10px] pt-[5px] pb-[10px] bg-white'>

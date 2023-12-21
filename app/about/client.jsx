@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
 import styles from '@/app/app.module.css';
-import { WebBanner, ContactForm } from '@/app/_components';
+import { WebBanner, ContactForm, ServicesSection } from '@/app/_components';
 import { SITE_DATA } from '@/config';
-import Link from 'next/link';
 
 const Client = () => {
 	return (
@@ -53,6 +52,13 @@ const Client = () => {
 						and more fulfilling life.
 					</div>
 				</div>
+			</section>
+			<section className={`${styles.section}`}>
+				<div className='w-full flex flex-col items-center justify-center mb-[40px] text-[var(--color-primary)]'>
+					<span className='text-[#000] text-[1rem] font-[600] uppercase'>What we do</span>
+					<h2 className='font-[600] text-[2rem]'>Our Services</h2>
+				</div>
+				<ServicesSection />
 			</section>
 			<section className={`bg-[#f2e8fd] ${styles.section}`}>
 				<div className='w-full text-center mb-[60px] text-[var(--color-primary)]'>

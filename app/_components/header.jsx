@@ -21,6 +21,7 @@ import {
 import Link from 'next/link';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './components.module.css';
+import services from '@/config/services';
 
 const RenderNavigation = ({ nav, handleOpenSideNav, windowLocation, host }) => {
 	return (
@@ -119,7 +120,9 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 			href: APP_ROUTES.SERVICES,
 			icon: '',
 			pref: 'pc',
-			children: []
+			children: services?.map((service, index) => {
+				return { name: service?.title, href: `${APP_ROUTES.SERVICES}#${service?.title?.split(' ')?.join('-')?.toLowerCase()}` };
+			})
 		},
 		{ name: 'Testimonials', href: APP_ROUTES.TESTIMONIALS, icon: '', pref: 'pc' },
 		{ name: 'Contact Us', href: APP_ROUTES.CONTACT, icon: '', pref: 'pc' }
@@ -167,7 +170,7 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 														className={`${
 															windowLocation === nav.href
 																? `text-[var(--color-primary)] before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[50%] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px]`
-																: 'text-white'
+																: 'text-black'
 														} text-[18px] font-[600] relative`}>
 														{nav.name}
 													</Link>
