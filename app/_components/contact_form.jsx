@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { contactUsFormAPISubmit } from '@/utils/api';
 import CircularProgress from '@mui/material/CircularProgress';
 import { ImageTag, CustomButton, SocialIcons } from '@/app/_components';
-import ContactUsImage from '@/assets/contact-us.png';
+import ContactUsImage from '@/assets/contact-us.jpg';
 import { SITE_DATA } from '@/config';
 import { AppContext } from '@/context';
 
@@ -60,7 +60,8 @@ const ContactForm = ({ hideImage }) => {
 					<div className='m-auto xss:col-span-1 md:col-span-4 xss:order-1 md:order-2 h-full flex flex-col items-center justify-center'>
 						<ImageTag
 							alt='Contact Us!'
-							className={`${styles.contact_form_logo} xss:mt-8 md:mt-0 rounded-[50%] mx-auto`}
+							priority
+							className={`xss:h-[200px] md:h-[280px] xss:w-[max-content] md:w-full xss:mt-8 md:mt-0 rounded-[50%] mx-auto`}
 							src={ContactUsImage}
 						/>
 						<div className='mt-4'>

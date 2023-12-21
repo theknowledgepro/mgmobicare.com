@@ -165,7 +165,3 @@
 .contact_form label {
     @apply font-[600] text-[14px] cursor-pointer text-[var(--color-primary)];
 }
-
-.contact_form_logo {
-    @apply xss:h-[200px] md:h-[300px] xss:w-[max-content] md:w-full md:mt-[20px];
-}

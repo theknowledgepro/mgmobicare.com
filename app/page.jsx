@@ -2,8 +2,8 @@
 import React from 'react';
 import styles from '@/app/app.module.css';
 import { Paper } from '@mui/material';
-import { SITE_DATA, APP_ROUTES } from '@/config';
-import { ContactForm, ImageTag } from '@/app/_components';
+import { SITE_DATA, ASSETS, APP_ROUTES } from '@/config';
+import { ContactForm, ImageTag, CustomButton, TestimonySection } from '@/app/_components';
 import Slider from 'react-slick';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
@@ -12,7 +12,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
-import bg1 from '@/assets/banners/bg1.jpg';
 
 const Client = () => {
 	const carouselSettings = {
@@ -55,6 +54,37 @@ const Client = () => {
 	];
 
 	const thumbnails = ['/folder/1.jpg', '/folder/2.jpg', '/folder/3.jpg', '/folder/4.jpg'];
+
+	const testimonials = [
+		{
+			clientName: 'Mary K.',
+			clientRating: 5,
+			content: `Choosing ${SITE_DATA.NAME} for my mom's homecare was the best decision. The caregivers are not just skilled professionals but also compassionate individuals. They've become like an extended family, providing exceptional care with a personal touch. Grateful for the peace of mind they've brought into our lives.`,
+			clientOccupation: 'Satisfied Client',
+			avatar: ASSETS.FEMALE_AVATAR
+		},
+		{
+			clientName: 'John D.',
+			clientRating: 4,
+			content: `We were impressed by the transparent and collaborative approach of ${SITE_DATA.NAME}. The regular updates and involvement in our loved one's care made all the difference. It's more than a service; it's a partnership. Thank you for the genuine care and support.`,
+			clientOccupation: 'Family Member',
+			avatar: ASSETS.MALE_AVATAR
+		},
+		{
+			clientName: 'Robert F.',
+			clientRating: 4,
+			content: `The trust we've built with ${SITE_DATA.NAME} is unmatched. The careful selection and compassionate delivery of care have made them an integral part of our family. Knowing that our loved ones are in capable hands allows us to focus on cherishing the moments together.`,
+			clientOccupation: 'Trusting Client',
+			avatar: ASSETS.MALE_AVATAR
+		},
+		{
+			clientName: 'Emily M.',
+			clientRating: 4,
+			content: `The dedicated team at ${SITE_DATA.NAME} goes above and beyond. Their commitment to providing not only physical but emotional support has made a significant impact on my parent's quality of life. I'm grateful for the positive and trusting relationship they've nurtured. Thank you for everything!`,
+			clientOccupation: 'Grateful Daughter',
+			avatar: ASSETS.FEMALE_AVATAR
+		}
+	];
 	return (
 		<div className='w-full h-full min-w-[100vw]'>
 			<Slider className='relative' {...carouselSettings}>
@@ -115,7 +145,7 @@ const Client = () => {
 			</section>
 			<section className={`bg-[#f2e8fd] xss:p-[60px_5%] md:p-[60px_10%]`}>
 				<div className='w-full mb-[40px]'>
-					<div className='uppercase w-[max-content] font-[600] xss:pt-[50px] md:pt-[10px] pb-[5px] text-black'>Who we are</div>
+					<div className='uppercase w-[max-content] font-[600] xss:pt-[80px] md:pt-[10px] pb-[5px] text-black'>Who we are</div>
 					<h2
 						style={{ textShadow: '1px 1px 2px #000' }}
 						className='font-[600] w-[max-content] text-[2rem] before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[40px] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px] text-[var(--color-primary)] relative'>
@@ -156,11 +186,11 @@ const Client = () => {
 											i === 2 && 'mt-[15%]'
 										} border-[2px] max-h-[180px] object-contain border-white`}
 										src={src}
+										alt='About Us'
 									/>
 								</div>
 							))}
 						</div>
-						{/* <img src='/folder/1.jpg' className='w-full h-full max-h-[320px] m-auto rounded-[5px] border-[3px] border-white' /> */}
 					</div>
 				</div>
 			</section>
@@ -170,8 +200,34 @@ const Client = () => {
 					<h2 className='font-[600] text-[2rem]'>Our Services</h2>
 				</div>
 			</section>
+			<section id='testimonials' className={`bg-[#f2e8fd] ${styles.section}`}>
+				<div className='w-full text-center mb-[60px] text-[var(--color-primary)]'>
+					<span className='text-[#000] text-[1rem] font-[600] uppercase'>What people say</span>
+					<h2 className='font-[600] text-[2rem]'>Our Testimonials!</h2>
+				</div>
+				<TestimonySection testimonials={testimonials} />
+			</section>
 			<section className={`bg-[#fff] ${styles.section}`}>
-				<div className='xss:col-span-1 md:col-span-12 text-center mb-[60px] text-[var(--color-primary)]'>
+				<div className='w-full text-center mb-[60px] text-[var(--color-primary)]'>
+					<span className='text-[#000] text-[1rem] font-[600] uppercase'>call us today</span>
+					<h2 className='font-[600] text-[2rem]'>Let's Serve You!</h2>
+				</div>
+				<Paper
+					elevation={3}
+					className='mx-auto rounded-[8px] flex items-center justify-center flex-col py-[30px] px-[30px] w-full max-w-[800px] h-[300px] bg-gradient-to-b from-[var(--color-primary)] to-[#f2e8fd]'>
+					<div style={{ textShadow: '1px 1px 2px #000' }} className='text-white text-[30px]'>
+						Book Appointment
+					</div>
+					<CustomButton
+						className='normal-case my-[40px] w-full max-w-[300px] flex items-center text-[22px] font-[600] btn-animated'
+						textColor='var(--color-primary)'
+						backgroundColor='#fff'>
+						Schedule an Appointment
+					</CustomButton>
+				</Paper>
+			</section>
+			<section className={`bg-[#f2e8fd] ${styles.section}`}>
+				<div className='w-full text-center mb-[60px] text-[var(--color-primary)]'>
 					<span className='text-[#000] text-[1rem] font-[600] uppercase'>WE'RE HERE TO SERVE YOU</span>
 					<h2 className='font-[600] text-[2rem]'>Reach Out to Us!</h2>
 				</div>

@@ -10,6 +10,7 @@ const navItems = [
 	{ name: 'Home', href: APP_ROUTES.HOME },
 	{ name: 'About Us', href: APP_ROUTES.ABOUT },
 	{ name: 'Our Services', href: APP_ROUTES.SERVICES },
+	{ name: 'Testimonials', href: APP_ROUTES.TESTIMONIALS },
 	{ name: 'Contact Us', href: APP_ROUTES.CONTACT },
 	{ name: 'Terms & Conditions', href: APP_ROUTES.TERMS },
 	{ name: 'Privacy Policy', href: APP_ROUTES.POLICY }
@@ -35,16 +36,23 @@ const Footer = () => (
 			<div
 				className={`w-full border-b-[1px] border-zinc-200 py-[30px] grid xss:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-[20px] gap-y-[30px]`}>
 				<div className='col-span-1 flex flex-col items-center justify-start'>
+					<div
+						style={{ textShadow: '1px 1px 2px #000' }}
+						className='xss:text-[30px] md:text-[35px] w-full text-white text-start font-[500]'>
+						{SITE_DATA.NAME}
+					</div>
 					<div style={{ textShadow: '1px 1px 2px #000' }}>
 						Elevate health and well-being with our expert team, bringing quality care to your doorstep.
 					</div>
-					<CustomButton
-						className='normal-case my-[40px] w-full flex items-center text-[17px] font-[600] btn-animated'
-						textColor='var(--color-primary)'
-						backgroundColor='#fff'>
-						<ArrowForwardRoundedIcon className='text-[inherit] mr-2' />
-						Schedule a Visit
-					</CustomButton>
+					<Link className='w-full' href={APP_ROUTES.CONTACT}>
+						<CustomButton
+							className='normal-case my-[40px] w-full flex items-center text-[17px] font-[600] btn-animated'
+							textColor='var(--color-primary)'
+							backgroundColor='#fff'>
+							<ArrowForwardRoundedIcon className='text-[inherit] mr-2' />
+							Schedule a Visit
+						</CustomButton>
+					</Link>
 					<div style={{ textShadow: '1px 1px 2px #000' }} className='w-full flex xss:justify-center sm:justify-start mb-[15px] font-[500]'>
 						Connect with us @
 					</div>
@@ -84,6 +92,13 @@ const Footer = () => (
 			</div>
 			<div className='w-full flex flex-col text-center items-center justify-center text-white font-[600] text-[13.5px] py-4'>
 				&copy; {new Date().getFullYear()} {SITE_DATA.COPYRIGHT_OWNER} - All Rights Reserved.
+				<br />
+				<div className='w-full flex items-center justify-center'>
+					Designed & Developed by
+					<Link className='mx-1 underline' target='_blank' href={SITE_DATA.DEVELOPER_URL}>
+						{SITE_DATA.DEVELOPER_NAME}
+					</Link>
+				</div>
 			</div>
 		</section>
 	</footer>

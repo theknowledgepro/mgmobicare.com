@@ -24,14 +24,11 @@ import styles from './components.module.css';
 
 const RenderNavigation = ({ nav, handleOpenSideNav, windowLocation, host }) => {
 	return (
-		<Link onClick={handleOpenSideNav} href={nav.href !== undefined ? nav.href : host} style={{ width: '100%' }}>
+		<Link onClick={handleOpenSideNav} className='w-full font-[500]' href={nav?.href ?? host}>
 			<ListItem
 				disablePadding
 				className='rounded-[0px] bg-[transparent]'
-				sx={{
-					display: 'block',
-					color: windowLocation === nav.href ? 'var(--color-primary)' : '#000'
-				}}>
+				sx={{ color: windowLocation === nav.href ? 'var(--color-primary)' : '#000' }}>
 				<ListItemButton sx={{ minHeight: 48, justifyContent: 'initial', px: 1.5, fontFamily: 'inherit' }}>
 					<ListItemIcon sx={{ minWidth: 0, mr: 1, ml: 'auto', justifyContent: 'center', color: '#000' }}>{nav.icon}</ListItemIcon>
 					<ListItemText primary={<span className='font-[600]'>{nav.name}</span>} className='text-[15px]' sx={{ opacity: 1 }} />
@@ -44,21 +41,10 @@ const RenderNavigation = ({ nav, handleOpenSideNav, windowLocation, host }) => {
 const RenderDropdownNav = ({ nav, handleOpenSideNav, host, windowLocation }) => {
 	return (
 		<div className='w-full'>
-			<Accordion
-				className='font-[600] bg-[transparent]'
-				disableGutters
-				elevation={0}
-				// expanded={nav.children.find((index) => index.href === windowLocation)}
-			>
+			<Accordion className='font-[600] bg-[transparent]' disableGutters elevation={0}>
 				<AccordionSummary
-					className='rounded-sm text-[var(--color-primary)] bg-[transparent]'
-					sx={{
-						padding: '0px auto',
-						borderRadius: '0px',
-						display: 'flex',
-						background: nav.children.find((index) => index.href === windowLocation) && 'var(--navbar-side-hover-bg)',
-						color: windowLocation === nav.href ? 'var(--navbar-side-hover-color)' : '#000'
-					}}
+					className='font-[500] rounded-[0px] p-[0px_auto] flex bg-[transparent]'
+					sx={{ color: nav.children.find((index) => index.href === windowLocation) && 'var(--color-primary)' }}
 					expandIcon={<ExpandMoreIcon className='text-[var(--color-primary)]' />}>
 					<Box sx={{ minWidth: 0, ml: -0.5, mr: 1, justifyContent: 'center' }}>{nav.icon}</Box>
 					<Box sx={{ opacity: 1, width: 'auto' }} className='text-[16px]'>
@@ -128,14 +114,15 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 	const NavItems = [
 		{ name: 'Home', href: APP_ROUTES.HOME, icon: '', pref: 'pc' },
 		{ name: 'About Us', href: APP_ROUTES.ABOUT, icon: '', pref: 'pc' },
-		{ name: 'Contact Us', href: APP_ROUTES.CONTACT, icon: '', pref: 'pc' },
 		{
 			name: 'Our Services',
 			href: APP_ROUTES.SERVICES,
 			icon: '',
 			pref: 'pc',
 			children: []
-		}
+		},
+		{ name: 'Testimonials', href: APP_ROUTES.TESTIMONIALS, icon: '', pref: 'pc' },
+		{ name: 'Contact Us', href: APP_ROUTES.CONTACT, icon: '', pref: 'pc' }
 	];
 
 	return (
