@@ -1,10 +1,9 @@
 'use client';
 import React from 'react';
 import styles from '@/app/app.module.css';
-import { WebBanner, BookAppointment, ImageTag, ContactForm } from '@/app/_components';
-import { SITE_DATA } from '@/config';
-import Link from 'next/link';
+import { WebBanner, BookAppointment, TestimonialSection, ImageTag, ContactForm } from '@/app/_components';
 import services from '@/config/services';
+import { TESTIMONIALS } from '@/config';
 
 const Client = () => {
 	return (
@@ -43,6 +42,13 @@ const Client = () => {
 					</section>
 				);
 			})}
+			<section id='testimonials' className={`bg-[#f2e8fd] ${styles.section}`}>
+				<div className='w-full text-center mb-[60px] text-[var(--color-primary)]'>
+					<span className='text-[#000] text-[1rem] font-[600] uppercase'>What people say</span>
+					<h2 className='font-[600] text-[2rem]'>Our Testimonials!</h2>
+				</div>
+				<TestimonialSection testimonials={TESTIMONIALS} />
+			</section>
 			<section className={`bg-[#fff] border-t-[4px] border-[var(--color-primary)] ${styles.section}`}>
 				<div className='w-full text-center mb-[60px] text-[var(--color-primary)]'>
 					<span className='text-[#000] text-[1rem] font-[600] uppercase'>call us today</span>

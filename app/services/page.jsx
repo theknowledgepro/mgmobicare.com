@@ -5,7 +5,7 @@ import ServiceClient from './client';
 
 export async function generateMetadata({ id, searchParams }) {
 	const metadata = await generateMetaData();
-	return { ...metadata, title: `Our Service | ${SITE_DATA.OFFICIAL_NAME}` };
+	return { ...metadata, title: `Our Services | ${SITE_DATA.OFFICIAL_NAME}` };
 }
 
 const Service = async () => {

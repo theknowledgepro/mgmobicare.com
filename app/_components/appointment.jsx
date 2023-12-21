@@ -17,7 +17,7 @@ const BookAppointment = () => {
 			</div>
 			<Link className='' href={APP_ROUTES.CONTACT}>
 				<CustomButton
-					className='normal-case py-[3px] mx-auto mt-[20px] w-[300px] flex items-center xss:text-[17px] md:text-[22px] font-[600] btn-animated'
+					className='normal-case py-[3px] mx-auto mt-[20px] xss:w-[250px] md:w-[300px] flex items-center xss:text-[17px] md:text-[22px] font-[600] btn-animated'
 					textColor='var(--color-primary)'
 					backgroundColor='#fff'>
 					Schedule an Appointment
