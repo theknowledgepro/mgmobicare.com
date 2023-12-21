@@ -20,7 +20,7 @@ const TestimonyCard = ({ testimony }) => {
 				/>
 			</div>
 			<div className='xss:col-span-12 xss:mt-[40px] md:mt-0 md:col-span-7'>
-				<i className='blockquote text-black text-[15px]' dangerouslySetInnerHTML={{ __html: testimony?.content }}></i>
+				<i className='blockquote text-black text-[17px]' dangerouslySetInnerHTML={{ __html: testimony?.content }}></i>
 				<div className='flex items-center mt-[10px] mb-[15px] xss:justify-center md:justify-start'>
 					{[...Array(Math.round(testimony?.clientRating) ?? 5)]?.map((rating, index) => (
 						<StarPurple500OutlinedIcon className='text-[16px] text-yellow-400' key={index} />
