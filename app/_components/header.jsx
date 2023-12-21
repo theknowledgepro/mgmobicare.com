@@ -209,7 +209,7 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 				id='mobile-header-ref'
 				className={`${
 					headerOriginalBgColor ? `bg-[var(--color-primary)]` : ''
-				} w-full flex md:hidden items-center justify-between p-2 border-b border-zinc-300 $shadow-[0_0_10px_var(--color-primary)] transition-all ease-out duration-300`}>
+				} w-full flex md:hidden items-center justify-between p-2 border-b border-zinc-300 shadow-[0_0_10px_var(--color-primary)] transition-all ease-out duration-300`}>
 				<ImageTag
 					src={ASSETS.LOGO}
 					style={{ width: '50px', height: '50px' }}
