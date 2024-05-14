@@ -28,7 +28,7 @@ const Client = () => {
 
 	const slides = [
 		{
-			backgroundImage: '/positive-mother-daughter-enjoying-dramatic-view.jpg',
+			backgroundImage: '/realistic-scene-with-elderly-care-senior-people.jpg',
 			headline: 'Mgmobi Care...',
 			description: ['Trusted Allies in Care...', 'Building trust through personalized care...', 'Dedicated to your well-being, always here...']
 		}

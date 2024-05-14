@@ -1,3 +1,4 @@
+import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import MarkEmailReadRoundedIcon from '@mui/icons-material/MarkEmailReadRounded';
@@ -83,7 +84,7 @@ const Footer = () => (
 					{navItems?.map((nav, index) => (
 						<div className='w-full flex items-center justify-start my-[8px] font-[600] duration-300 hover:translate-x-[20px]' key={index}>
 							<Link href={nav?.href ?? APP_ROUTES.HOME}>
-								<ArrowForwardRoundedIcon className='text-[inherit] mr-2' />
+								<CircleOutlinedIcon className='text-[inherit] mr-2' />
 								{nav?.name}
 							</Link>
 						</div>

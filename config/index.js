@@ -2,7 +2,7 @@ const logoFile = require('../assets/logo.jpg');
 const maleAvatar = require('../assets/male-avatar.jpg');
 const femaleAvatar = require('../assets/female-avatar.jpg');
 
-const host = 'http://mgmobicare.localhost:3002';
+const host = 'https://mgmobicare.com';
 
 module.exports = {
 	SITE_DATA: {
@@ -11,7 +11,7 @@ module.exports = {
 		TWITTER_HANDLE: '',
 		THEME_COLOR: '#843bd1',
 		CONTACT_TEL: '07041960963',
-		CONTACT_EMAIL: 'info@mgmobi.com',
+		CONTACT_EMAIL: 'contact@mgmobi.com',
 		HEAD_OFFICE: '23, The Green Ste R, Dover County, Delaware, USA.',
 		COPYRIGHT_OWNER: 'Mgmobi Care',
 		DEVELOPER_URL: 'https://ajibo.promisedera.com',
