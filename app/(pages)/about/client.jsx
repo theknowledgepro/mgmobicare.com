@@ -11,10 +11,10 @@ import img4 from '@/assets/services/4.jpg';
 const Client = () => {
 	return (
 		<div className='w-full h-full'>
-			<WebBanner src='/positive-mother-daughter-enjoying-dramatic-view.jpg' page='About Us' />
+			<WebBanner src='/nurse-feeding-elderly-senior-man-eat-breakfast-nursing-home.jpg' page='About Us' />
 			<section className={`bg-[#f2e8fd] ${styles.section}`}>
 				<div className='xss:col-span-1 md:col-span-12 text-center mb-[60px] text-[var(--color-primary)]'>
-					<h2 style={{ textShadow: '1px 1px 2px #000' }} className='font-[600] text-[2rem]'>
+					<h2 style={{ textShadow: '1px 1px 2px #0005' }} className='font-[600] text-[2rem]'>
 						About {SITE_DATA.NAME}
 					</h2>
 				</div>
@@ -38,7 +38,7 @@ const Client = () => {
 				</div>
 
 				<div className='w-full grid grid-cols-12 xss:gap-x-0 xss:gap-y-[10px] md:gap-[2rem] mb-[20px]'>
-					<div className='text-[17px] xss:col-span-12 md:col-span-7 xss:order-2 md:order-1 my-auto'>
+					<div className='text-[17px] xss:col-span-12 md:col-span-7 xss:order-2 my-auto'>
 						Whether it's assistance with daily activities, medication management, or specialized healthcare needs, we are here to support
 						you and your loved ones on the journey to optimal well-being.
 						<br />
@@ -47,7 +47,7 @@ const Client = () => {
 						possess not only the necessary skills but also the empathy and compassion needed to create meaningful connections with our
 						clients. We believe that building strong, trusting relationships is the foundation of exceptional care.
 					</div>
-					<div className='text-[17px] xss:col-span-12 md:col-span-5 xss:order-1 md:order-2'>
+					<div className='text-[17px] xss:col-span-12 md:col-span-5 xss:order-1'>
 						<ImageTag
 							alt={'About Image 2'}
 							priority
@@ -79,7 +79,7 @@ const Client = () => {
 				</div>
 
 				<div className='w-full grid grid-cols-12 xss:gap-x-0 xss:gap-y-[10px] md:gap-[2rem] mb-[20px]'>
-					<div className='text-[17px] xss:col-span-12 md:col-span-7 xss:order-2 md:order-1 my-auto'>
+					<div className='text-[17px] xss:col-span-12 md:col-span-7 xss:order-2 my-auto'>
 						<span className='text-[var(--color-primary)]'>{SITE_DATA.NAME}</span> is not just a service provider; we are your partners in
 						care. Our goal is to create a supportive and nurturing environment where individuals can thrive in the comfort of their homes.
 						We work closely with families to develop personalized care plans, ensuring that every aspect of a client's life is considered.
@@ -90,7 +90,7 @@ const Client = () => {
 						long-term care solutions, we are here for you. Trust us to be your dedicated partner on the journey to a healthier, happier,
 						and more fulfilling life.
 					</div>
-					<div className='text-[17px] xss:col-span-12 md:col-span-5 xss:order-1 md:order-2'>
+					<div className='text-[17px] xss:col-span-12 md:col-span-5 xss:order-1'>
 						<ImageTag
 							alt={'About Image 4'}
 							priority

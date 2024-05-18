@@ -20,7 +20,7 @@ const Client = () => {
 						} mb-[20px] grid grid-cols-12 xss:gap-x-0 xss:gap-y-[10px] md:gap-[2rem]`}>
 						<div className={`xss:col-span-12 md:col-span-6 ${index % 2 === 0 ? 'xss:order-2 md:order-1' : 'xss:order-2 md:order-2'}`}>
 							<div
-								style={{ textShadow: '1px 1px 2px #000' }}
+								style={{ textShadow: '1px 1px 2px #0002' }}
 								className={`xss:text-[28px] md:text-[35px] w-full flex items-start justify-start text-[var(--color-primary)] font-[500] text-start`}>
 								<span className='mr-1 my-auto'>{icon}</span> {title}
 							</div>

@@ -1,4 +1,16 @@
+/** @type {import('next').NextConfig} */
+import PWA from 'next-pwa';
 const API_DOMAIN = 'https://services.promisedera.com/api/mgmobicare';
+
+const withPWA = PWA({
+	dest: 'public',
+	register: true,
+	skipWaiting: true,
+	disable: process.env.NODE_ENV === 'development',
+	cacheOnFrontEndNav: true,
+	reloadOnOnline: true,
+	register: true
+});
 
 const nextConfig = {
 	compiler: { styledComponents: true },
@@ -13,4 +25,4 @@ const nextConfig = {
 	}
 };
 
-module.exports = nextConfig;
+export default withPWA(nextConfig);

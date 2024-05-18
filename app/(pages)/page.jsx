@@ -67,7 +67,7 @@ const Client = () => {
 							style={{ maxHeight: '768px' }}
 							alt={`Slide Thumbnail`}
 						/>
-						<div className={`absolute top-0 start-0 w-full h-full flex items-center`} style={{ background: 'rgba(43, 57, 64, .5)' }}>
+						<div className={`absolute top-0 start-0 w-full h-full flex items-center`} style={{ background: 'rgba(43, 57, 64, .3)' }}>
 							<div
 								className={`relative xss:ml-[8px] md:ml-[70px] pt-[100px] pb-[30px] pr-[100px ] border-l-[15px] border-[var(--color-primary)] xss:h-[70%] md:h-[62%] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[100px] before:h-[15px] before:bg-[var(--color-primary)] after:content-[''] after:absolute after:top-[100%] after:mt-[-15px] after:left-0 after:w-[100px] after:h-[15px] after:bg-[var(--color-primary)]`}>
 								<div className={`flex justify-start`}>
@@ -102,11 +102,11 @@ const Client = () => {
 							className='xss:col-span-3 md:col-span-1 bg-[#512481ad] rounded-[20px_20px] border-[2px] border-white flex flex-col items-start justify-center py-[30px] px-[30px]'>
 							<div>{perk?.icon}</div>
 							<div
-								style={{ textShadow: '1px 1px 2px #000' }}
+								style={{ textShadow: '1px 1px 2px #0005' }}
 								className='font-[500] text-white my-[5px]  before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-white before:bottom-[-5px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[40px] after:rounded-[30px] after:bg-white after:bottom-[-5px] after:left-[15px] relative text-[22px]'>
 								{perk?.title}
 							</div>
-							<div style={{ textShadow: '1px 1px 2px #000' }} className='mt-[3px] text-[16px] text-white'>
+							<div style={{ textShadow: '1px 1px 2px #0005' }} className='mt-[3px] text-[16px] text-white'>
 								{perk?.content}
 							</div>
 						</Paper>
@@ -117,7 +117,7 @@ const Client = () => {
 				<div className='w-full mb-[40px]'>
 					<div className='uppercase w-[max-content] font-[600] xss:pt-[150px] md:pt-[10px] pb-[5px] text-black'>Who we are</div>
 					<h2
-						style={{ textShadow: '1px 1px 2px #000' }}
+						style={{ textShadow: '1px 1px 2px #0005' }}
 						className='font-[600] w-[max-content] text-[2rem] before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[40px] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px] text-[var(--color-primary)] relative'>
 						{SITE_DATA.NAME}
 					</h2>

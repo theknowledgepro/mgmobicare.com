@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Client = () => {
 	return (
 		<div className='w-full h-full'>
-			<WebBanner src='/positive-mother-daughter-enjoying-dramatic-view.jpg' page='About Us' />
+			<WebBanner src='/nurse-feeding-elderly-senior-man-eat-breakfast-nursing-home.jpg' page='Policy' />
 		</div>
 	);
 };

@@ -40,7 +40,7 @@ const ServiceCard = ({ service, cardWrapperClassName }) => {
 			rearContent={
 				<div className='p-3 flex flex-col items-center justify-center relative w-full h-full'>
 					<div className='w-full flex items-center justify-center mb-[10px]'>{service?.icon}</div>
-					<div style={{ textShadow: '1px 1px 2px #0007' }} className='w-full text-center text-[20px]'>
+					<div style={{ textShadow: '1px 1px 2px #0003' }} className='w-full text-center text-[20px]'>
 						{service?.title}
 					</div>
 					<div className='pt-3 pb-[25px] text-center w-full'>{service?.summary}</div>
