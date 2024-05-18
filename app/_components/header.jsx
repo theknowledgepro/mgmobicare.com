@@ -81,12 +81,12 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 	ChangeClassNameAtPosition({
 		startPosition: 45,
 		targetRef: mobileHeaderRef,
-		className: 'bg-white shadow-[0px_0px_2px_var(--color-primary)]'
+		className: 'bg-white shadow-[0px_0px_1px_var(--color-primary)]'
 	});
 	ChangeClassNameAtPosition({
 		startPosition: 45,
 		targetRef: pcHeaderRef,
-		className: 'bg-white shadow-[0px_0px_2px_var(--color-primary)]'
+		className: 'bg-white shadow-[0px_0px_1px_var(--color-primary)]'
 	});
 
 	const handleOpenSideNav = () => {

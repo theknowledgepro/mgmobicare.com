@@ -2,7 +2,7 @@
 import { SITE_DATA, APP_ROUTES } from '@/config';
 import services from '@/config/services';
 
-const generateMetaData = async ({ title }) => {
+const generateMetaData = async ({ title = SITE_DATA.NAME }) => {
 	return {
 		title,
 		description:
