@@ -81,12 +81,12 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 	ChangeClassNameAtPosition({
 		startPosition: 45,
 		targetRef: mobileHeaderRef,
-		className: 'bg-white shadow-[0px_0px_3px_var(--color-primary)]'
+		className: 'bg-white shadow-[0px_0px_2px_var(--color-primary)]'
 	});
 	ChangeClassNameAtPosition({
 		startPosition: 45,
 		targetRef: pcHeaderRef,
-		className: 'bg-white shadow-[0px_0px_3px_var(--color-primary)]'
+		className: 'bg-white shadow-[0px_0px_2px_var(--color-primary)]'
 	});
 
 	const handleOpenSideNav = () => {
@@ -135,8 +135,8 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 				id='pc-header-ref'
 				className={`${
 					headerOriginalBgColor ? 'bg-[var(--color-primary)]' : ''
-				} hidden $shadow-[0_0_10px_var(--color-primary)] xss:p-[0px_5%] md:p-[0px_8%] w-full xss:h-[60px] md:h-[75px] border-b border-zinc-300 md:flex justify-between items-center transition-all ease-out duration-300`}>
-				<ImageTag src={ASSETS.LOGO} style={{ width: '50px', height: '50px' }} className='w-[100%] h-[50px]' alt='logo' priority={true} />
+				} hidden xss:p-[0px_5%] md:p-[0px_8%] w-full xss:h-[60px] md:h-[75px] border-b border-zinc-300 md:flex justify-between items-center transition-all ease-out duration-300`}>
+				<ImageTag src={ASSETS.LOGO} style={{ width: '50px', height: '50px' }} className='w-[50px] h-[50px]' alt='logo' priority={true} />
 				<div className='flex items-center justify-center gap-[25px]'>
 					<div className='flex items-center justify-center'>
 						{NavItems.filter((index) => index.pref === 'pc').map((nav, i) => (
@@ -180,8 +180,8 @@ const WebHeader = ({ headerOriginalBgColor, host = APP_ROUTES.HOME }) => {
 											onClick={() => handleDesktopNavClick(nav)}
 											className={`${
 												windowLocation === nav.href
-													? `before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[50%] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px]`
-													: `text-[var(--color-primary)]`
+													? `text-[var(--color-primary)] before:content-[""] before:absolute before:h-[4px] before:w-[10px] before:rounded-[30px] before:bg-[var(--color-primary)] before:bottom-[-10px] before:left-0 after:content-[""] after:absolute after:h-[4px] after:w-[50%] after:rounded-[30px] after:bg-[var(--color-primary)] after:bottom-[-10px] after:left-[15px]`
+													: `text-black`
 											} text-[18px] font-[600] relative`}>
 											{nav.name}
 										</Link>
