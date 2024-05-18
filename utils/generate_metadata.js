@@ -53,16 +53,8 @@ const generateMetaData = async ({ title }) => {
 		],
 		applicationName: SITE_DATA.NAME,
 		metadataBase: new URL(`${APP_ROUTES.HOME}`),
+		manifest: '/manifest.json',
 		referrer: 'origin-when-cross-origin',
-		icons: {
-			icon: '/icons/icon.png',
-			shortcut: '/icons/shortcut-icon.png',
-			apple: '/icons/apple-icon.png',
-			other: {
-				rel: 'apple-touch-icon-precomposed',
-				url: '/icons/apple-touch-icon-precomposed.png'
-			}
-		},
 		openGraph: {
 			title,
 			description:
@@ -70,14 +62,9 @@ const generateMetaData = async ({ title }) => {
 			siteName: SITE_DATA.NAME,
 			images: [
 				{
-					url: `${APP_ROUTES.HOME}og.png`,
+					url: `${APP_ROUTES.HOME}icons/og.png`,
 					width: 800,
 					height: 600
-				},
-				{
-					url: `${APP_ROUTES.HOME}og.png`,
-					width: 1800,
-					height: 1600
 				}
 			],
 			locale: 'en_US',
@@ -88,7 +75,7 @@ const generateMetaData = async ({ title }) => {
 			title,
 			description:
 				'Discover compassionate homecare services tailored to your needs. Personalized care plans, skilled caregivers, and a commitment to well-being.',
-			images: [`${APP_ROUTES.HOME}og.png`],
+			images: [`${APP_ROUTES.HOME}icons/og.png`],
 			site: SITE_DATA.TWITTER_HANDLE
 		},
 		robots: {

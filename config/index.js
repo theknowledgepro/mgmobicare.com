@@ -1,4 +1,4 @@
-const logoFile = require('../assets/logo.jpg');
+const logoFile = require('../assets/logo-icon.png');
 const maleAvatar = require('../assets/male-avatar.jpg');
 const femaleAvatar = require('../assets/female-avatar.jpg');
 
