@@ -9,20 +9,21 @@ const withPWA = PWA({
 	disable: process.env.NODE_ENV === 'development',
 	cacheOnFrontEndNav: true,
 	reloadOnOnline: true,
-	register: true
+	register: true,
 });
 
 const nextConfig = {
+	output: 'export',
 	compiler: { styledComponents: true },
 	reactStrictMode: true,
 	async rewrites() {
 		return [
 			{
 				source: `/api/:path*`,
-				destination: `${API_DOMAIN}/:path*`
-			}
+				destination: `${API_DOMAIN}/:path*`,
+			},
 		];
-	}
+	},
 };
 
 export default withPWA(nextConfig);
