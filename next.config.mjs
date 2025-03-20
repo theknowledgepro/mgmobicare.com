@@ -14,6 +14,7 @@ const withPWA = PWA({
 
 const nextConfig = {
 	output: 'export',
+	images: { unoptimized: true },
 	compiler: { styledComponents: true },
 	reactStrictMode: true,
 	async rewrites() {

@@ -1,4 +1,3 @@
-'use server';
 import { SITE_DATA, APP_ROUTES } from '@/config';
 import services from '@/config/services';
 
@@ -49,7 +48,7 @@ const generateMetaData = async ({ title = SITE_DATA.NAME }) => {
 			'Client-Centered Approach',
 			'Mindfulness',
 			'Nutrient-Rich Meals',
-			'Specialized Therapies'
+			'Specialized Therapies',
 		],
 		applicationName: SITE_DATA.NAME,
 		metadataBase: new URL(`${APP_ROUTES.HOME}`),
@@ -64,11 +63,11 @@ const generateMetaData = async ({ title = SITE_DATA.NAME }) => {
 				{
 					url: `${APP_ROUTES.HOME}icons/og.png`,
 					width: 800,
-					height: 600
-				}
+					height: 600,
+				},
 			],
 			locale: 'en_US',
-			type: 'website'
+			type: 'website',
 		},
 		twitter: {
 			card: 'summary',
@@ -76,7 +75,7 @@ const generateMetaData = async ({ title = SITE_DATA.NAME }) => {
 			description:
 				'Discover compassionate homecare services tailored to your needs. Personalized care plans, skilled caregivers, and a commitment to well-being.',
 			images: [`${APP_ROUTES.HOME}icons/og.png`],
-			site: SITE_DATA.TWITTER_HANDLE
+			site: SITE_DATA.TWITTER_HANDLE,
 		},
 		robots: {
 			index: true,
@@ -88,9 +87,9 @@ const generateMetaData = async ({ title = SITE_DATA.NAME }) => {
 				noimageindex: false,
 				'max-video-preview': -1,
 				'max-image-preview': 'large',
-				'max-snippet': -1
-			}
-		}
+				'max-snippet': -1,
+			},
+		},
 	};
 };
 

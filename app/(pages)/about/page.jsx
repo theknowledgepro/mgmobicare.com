@@ -1,4 +1,3 @@
-'use server';
 import generateMetaData from '@/utils/generate_metadata';
 import { SITE_DATA, APP_ROUTES } from '@/config';
 import AboutClient from './client';
